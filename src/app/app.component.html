@@ -1,0 +1,19 @@
+<mat-card>
+  {{title}} for {{alldates}}
+</mat-card>
+<div>
+  <form [formGroup]="form" class="example-form">
+    Enter Location <mat-form-field class="example-full-width" appearance="fill"
+      style="background-color: rgb(212, 212, 212);">
+      <input matInput formControlName="location">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="button" (click)="getData()">Get</button>
+  </form>
+</div>
+<div>
+  <canvas id="canvas">{{ chart }}</canvas>
+</div>
+<mat-list role="list">
+  <mat-list-item role="listitem" style="color: #FF0000">Max temperature</mat-list-item>
+  <mat-list-item role="listitem" style="color: #0000FF">Min temperature</mat-list-item>
+</mat-list>
